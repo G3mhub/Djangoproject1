@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+    <style>
+        /* Estilos CSS para la navbar */
+        nav {
+            background-color: #B82132; /* Color principal */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* Espacio entre elementos */
+            align-items: center; /* Alineación vertical */
+        }
+
+        nav a {
+            color: #F6DED8; /* Color del texto */
+            text-decoration: none;
+            margin: 0 15px; /* Espacio entre enlaces */
+            font-weight: bold;
+            transition: color 0.3s ease; /* Transición suave para el hover */
+        }
+                nav a:hover {
+            color: #D2665A; /* Color al pasar el mouse */
+        }
+        .nav-brand{
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-brand">Mi Marca</a> {# Nombre de la marca #}
+        <div> {# Contenedor para los enlaces de navegación #}
+            <a href="/">Inicio</a>
+            <a href="/acerca/">Acerca</a>
+            <a href="/contacto/">Contacto</a>
+            {% if user.is_authenticated %}
+            <a href="/perfil/">Perfil</a>
+            <a href="/logout/">Cerrar Sesión</a>
+            {% else %}
+            <a href="/login/">Iniciar Sesión</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    
+        {% block content %}
+
+        
+        {% endblock %}
+
+</body>
+</html>
