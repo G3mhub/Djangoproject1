@@ -1,19 +1,18 @@
 {% extends "navbar.html" %}
+{% load static %}
+
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 
-        
-
-{% for elemento in post_list %}
-
-    <a href="{% url 'detail' elemento.pk %}"><h1>{{elemento.title}}</h1>></a>
-
-    <br>
-
-{% empty %}
-
-<p>No has agregado elementos</p>
-
-{% endfor %}
-
+<div class="post-container">
+    {% for elemento in post_list %}
+        <a href="{% url 'detail' elemento.pk %}" class="post-link">
+            <h1 class="post-title">{{ elemento.title }}</h1>
+        </a>
+        <br>
+    {% empty %}
+        <p class="empty-message">No has agregado elementos</p>
+    {% endfor %}
+</div>
 {% endblock %}

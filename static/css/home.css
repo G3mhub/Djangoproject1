@@ -1,0 +1,45 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.post-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-title {
+    background-color: #B82132; /* Color principal */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post-title:hover {
+    background-color: #D2665A; /* Color secundario al pasar el cursor */
+    transform: translateY(-5px) scale(1.05); /* Efecto de sobresalir */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.empty-message {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+}
