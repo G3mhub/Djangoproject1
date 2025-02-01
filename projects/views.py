@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView,DeleteView,UpdateView
 from projects.models import Post
 from django.urls import reverse_lazy
 
+
 # Create your views here.
 
 class ListProjects(ListView):
@@ -19,3 +20,10 @@ class CreatePageView(CreateView):
     template_name="create.html"
     fields= ["title", "description", "image"]
     success_url = reverse_lazy("home")
+
+class UpdatePageView(UpdateView):
+    model = Post
+    fields= ["title","description","image"]
+    template_name = "update.html"
+    success_url = reverse_lazy("home")
+    
