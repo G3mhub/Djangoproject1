@@ -1,9 +1,9 @@
-<form action="post" enctype="multipart/form-data">
+<form  method="post" enctype="multipart/form-data">
 
     {% csrf_token %}
 
     {{ form.as_p }}
 
-    <imput type="submit" value="save"></imput>
+    <input type="submit" value="save">
 
 </form>

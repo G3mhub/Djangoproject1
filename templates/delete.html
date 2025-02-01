@@ -1,0 +1,7 @@
+<form method="post">
+    {% csrf_token %}
+    <p>seguro segurito q quieres borrar esa vaina?</p>
+    {{form.as_p}}
+
+    <input type="submit" value="eliminar">
+</form>
