@@ -1,45 +1,52 @@
-/* Estilos generales */
+/* Aplicar un GIF como fondo de la página */
 body {
+    background-image: url('/static/css/ralseispin.gif'); /* Ruta a tu imagen GIF */
+    background-size: cover 300px; /* Asegura que el GIF cubra toda la página */
+    background-position: center; /* Centra el GIF */
+    background-repeat: no-repeat; /* Evita que el GIF se repita */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
+/* Estilos para el contenedor de los posts */
 .post-container {
-    max-width: 800px;
-    margin: 50px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF(255, 255, 255, 0.8); /* Fondo semitransparente para mejorar la legibilidad */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Estilos para los enlaces de los posts */
 .post-link {
     text-decoration: none;
-    color: inherit;
     display: block;
+    background-color: #DD88CF;
+    color: #4B164C;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto al pasar el mouse sobre los enlaces */
+.post-link:hover {
+    transform: translateY(-5px); /* Hace que el botón sobresalga */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para el efecto */
+    background-color: #4B164C; /* Cambia el color de fondo al pasar el mouse */
+    color: #FFFFFF; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para los títulos de los posts */
 .post-title {
-    background-color: #B82132; /* Color principal */
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    margin: 10px 0;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 24px;
+    margin: 0;
 }
 
-.post-title:hover {
-    background-color: #D2665A; /* Color secundario al pasar el cursor */
-    transform: translateY(-5px) scale(1.05); /* Efecto de sobresalir */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
+/* Estilos para el mensaje cuando no hay elementos */
 .empty-message {
     text-align: center;
-    color: #666;
+    color: #4B164C;
     font-size: 18px;
 }
