@@ -1,3 +1,6 @@
+{% extends "navbar.html" %}
+{% block content %}
+
 <form method="post">
     {% csrf_token %}
     <p>seguro segurito q quieres borrar esa vaina?</p>
@@ -5,3 +8,4 @@
 
     <input type="submit" value="eliminar">
 </form>
+{% endblock %}

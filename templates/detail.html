@@ -12,8 +12,8 @@
 {% else %}
 <h3>no tiene ni una imagen manin</h3>
 {% endif %}
-<a href="{% url 'update' post.pk %}">update</a>
+<a href="{% url 'update' post.pk %}">Edit</a>
 
-<a href="{% url 'delete' post.pk %}">delete</a>
+<a href="{% url 'delete' post.pk %}">Delete</a>
 
 {% endblock %}
