@@ -1,0 +1,14 @@
+{% if user.is_authenticated %}
+
+<h3>well hi {{user.username}}</h3>
+
+<a href="{% url 'home' %}">Get in!</a>
+{% else %}
+
+<p>crea una cuenta antes de ingresar.</p>
+<a href="{% url 'signup' %}">crea tu cuenta!</a>
+
+<p>si ya tienes una, inicia sesion!</p>
+<a href="{% url 'login' %}">iniciar sesion</a>
+
+{% endif %}
