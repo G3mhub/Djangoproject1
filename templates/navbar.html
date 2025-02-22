@@ -1,33 +1,14 @@
+{% load static %}
+
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mi Sitio{% endblock %}</title>
-    <style>
-        /* Estilos CSS para la navbar */
-        nav {
-            background-color:rgb(99, 44, 78); /* Color principal */
-            padding: 10px;
-            display: flex;
-            justify-content: space-between; /* Espacio entre elementos */
-            align-items: center; /* Alineación vertical */
-        }
-
-        nav a {
-            color:rgb(255, 252, 251); /* Color del texto */
-            text-decoration: none;
-            margin: 0 15px; /* Espacio entre enlaces */
-            font-weight: bold;
-            transition: color 0.3s ease; /* Transición suave para el hover */
-        }
-                nav a:hover {
-            color:rgb(240, 166, 158); /* Color al pasar el mouse */
-        }
-        .nav-brand{
-            font-size: 1.5em;
-        }
-
-    </style>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="{% static 'C:\Users\Admin\Desktop\django project\static\css\navbar.css' %}">
 </head>
 <body>
     <nav>
@@ -35,20 +16,21 @@
         <div> {# Contenedor para los enlaces de navegación #}
             <a href="{% url 'create' %}">create</a>
             <a href="/acerca/">about</a>
-            <a href="/contacto/">contact</a>
+            <a href="/contacto/">contacto</a>
             {% if user.is_authenticated %}
-            <a href="/perfil/">profile</a>
+            <a href="/perfil/">perfil</a>
             {% else %}
-
             {% endif %}
         </div>
+        {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="logout">cerrar sesión</button>
+        </form>
+        {% endif %}
     </nav>
 
-    
-        {% block content %}
-
-        
-        {% endblock %}
-
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

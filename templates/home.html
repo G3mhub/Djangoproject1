@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'C:\Users\Admin\Desktop\django project\static\css\home.css' %}">
+<link rel="stylesheet" href="{%static 'C:\Users\Admin\Desktop\django project\static\css\home.css'%}">
 
 <div class="post-container">
     {% for elemento in post_list %}
@@ -12,7 +12,7 @@
         </a>
         <br>
     {% empty %}
-        <p class="empty-message">No has agregado elementos</p>
+        <p class="empty-message">no hay na'</p>
     {% endfor %}
 </div>
 {% endblock %}

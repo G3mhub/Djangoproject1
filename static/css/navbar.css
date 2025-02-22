@@ -1,0 +1,40 @@
+/* Estilos CSS para la navbar */
+nav {
+    background-color: rgb(99, 44, 78); /* Color principal */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alineación vertical */
+}
+
+nav a {
+    color: rgb(255, 252, 251); /* Color del texto */
+    text-decoration: none;
+    margin: 0 15px; /* Espacio entre enlaces */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+nav a:hover {
+    color: rgb(240, 166, 158); /* Color al pasar el mouse */
+}
+
+.nav-brand {
+    font-size: 1.5em;
+}
+
+/* Estilos para el botón de cerrar sesión */
+.logout {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    color: rgb(255, 252, 251); /* Color del texto */
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 1em; /* Tamaño de fuente */
+    margin: 0 15px; /* Espacio entre elementos */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.logout:hover {
+    color: rgb(240, 166, 158); /* Color al pasar el mouse */
+}
