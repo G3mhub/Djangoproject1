@@ -3,16 +3,42 @@
 
 
 {% block content %}
-<link rel="stylesheet" href="{%static 'C:\Users\Admin\Desktop\django project\static\css\home.css'%}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <style>
+        .gif {
+            background-image: url('{% static "image/ralseispin.gif" %}');
+            background-size: 300px; /* Cubre toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat;
+            height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+            margin: 0; /* Elimina el margen predeterminado */
+            padding: 0;
+            display: flex; /* Usa flexbox para centrar el contenido */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            flex-direction: column; /* Alinea el contenido en columna */            
+        }
+    </style>
 
-<div class="post-container">
-    {% for elemento in post_list %}
-        <a href="{% url 'detail' elemento.pk %}" class="post-link">
-            <h1 class="post-title">{{ elemento.title }}</h1>
-        </a>
-        <br>
-    {% empty %}
-        <p class="empty-message">no hay na'</p>
-    {% endfor %}
-</div>
+    <div class="post-container">
+        {% for elemento in post_list %}
+            <a href="{% url 'detail' elemento.pk %}" class="post-link">
+                <h1 class="post-title">{{ elemento.title }}</h1>
+            </a>
+               <br>
+                <div class="portafolio-item">
+                    <a href="{% url 'detail' elemento.pk %}">
+                    {% if elemento.image %}
+                        <div class="post-image">
+                            <img src="{{ elemento.image.url }}" alt="{{ elemento.title }}">
+                        </div>
+                    {% endif %}
+                    <h1>{{ elemento.title }}</h1>
+                    </a>
+                </div>
+        {% empty %}
+            <p class="empty-message">No hay na'</p>
+            <div class="gif"></div>
+        {% endfor %}
+    </div>
 {% endblock %}
