@@ -1,40 +1,55 @@
-/* Estilos CSS para la navbar */
-nav {
-    background-color: rgb(99, 44, 78); /* Color principal */
-    padding: 10px;
-    display: flex;
-    justify-content: space-between; /* Espacio entre elementos */
-    align-items: center; /* Alineación vertical */
+/* Estilos para el contenedor de publicaciones */
+.post-container {
+    background-color: rgb(99, 44, 78); /* Mismo color que la navbar */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto; /* Centrar el contenedor y agregar margen */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
-nav a {
-    color: rgb(255, 252, 251); /* Color del texto */
+/* Estilos para cada publicación (hilo) */
+.portafolio-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Espacio entre publicaciones */
+    transition: background-color 0.3s ease;
+}
+
+.portafolio-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover */
+}
+
+/* Estilos para los enlaces de las publicaciones */
+.post-link {
     text-decoration: none;
-    margin: 0 15px; /* Espacio entre enlaces */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Transición suave para el hover */
+    color: rgb(255, 252, 251); /* Mismo color que la navbar */
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: rgb(240, 166, 158); /* Color al pasar el mouse */
+.post-link:hover {
+    color: rgb(240, 166, 158); /* Mismo color hover que la navbar */
 }
 
-.nav-brand {
+/* Estilos para el título de las publicaciones */
+.post-title {
     font-size: 1.5em;
-}
-
-/* Estilos para el botón de cerrar sesión */
-.logout {
-    background-color: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
+    margin-bottom: 10px;
     color: rgb(255, 252, 251); /* Color del texto */
-    font-weight: bold;
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    font-size: 1em; /* Tamaño de fuente */
-    margin: 0 15px; /* Espacio entre elementos */
-    transition: color 0.3s ease; /* Transición suave para el hover */
 }
 
-.logout:hover {
-    color: rgb(240, 166, 158); /* Color al pasar el mouse */
+/* Estilos para las imágenes de las publicaciones */
+.post-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+}
+
+/* Estilos para el mensaje cuando no hay publicaciones */
+.empty-message {
+    color: rgb(255, 252, 251); /* Mismo color que la navbar */
+    text-align: center;
+    font-size: 1.2em;
 }

@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #AC1754; /* Fondo principal con el color #AC1754 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #fdfefe; /* Fondo del formulario con el color #fdfefe */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333; /* Color del texto de las etiquetas */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #AC1754; /* Color del borde al enfocar */
+    outline: none;
+    box-shadow: 0 0 8px rgba(172, 23, 84, 0.4); /* Sombra al enfocar */
+}
+
+/* Estilos para el botón de registro */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #AC1754; /* Color de fondo del botón */
+    color: #fdfefe; /* Color del texto del botón */
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #8a1242; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.02); /* Efecto de escala al pasar el mouse */
+}

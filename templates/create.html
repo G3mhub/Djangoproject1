@@ -1,12 +1,21 @@
 {% extends "navbar.html" %}
 
 {% block content %}
-
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-
-    <input type="submit" value="save">
-</form>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="s">
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Renderiza el formulario como párrafos -->
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
 {% endblock %}

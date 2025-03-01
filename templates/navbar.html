@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,11 +11,11 @@
 </head>
 <body>
     <nav>
-        <a href="/" class="nav-brand">nombre rancio</a> {# Nombre de la marca #}
+        <a href="/" class="nav-brand">
+            <img src="{% static 'image/dmclogo.png' %}" alt="Logo" class="logo" height="50px" width="70px"> {# Logo de la marca #}
+        </a>
         <div> {# Contenedor para los enlaces de navegación #}
             <a href="{% url 'create' %}">create</a>
-            <a href="/acerca/">about</a>
-            <a href="/contacto/">contacto</a>
             {% if user.is_authenticated %}
             <a href="/perfil/">perfil</a>
             {% else %}
